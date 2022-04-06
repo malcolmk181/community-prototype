@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Community</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <script src="https://kit.fontawesome.com/f1ec0ad08c.js" crossorigin="anonymous"></script>
+    <script src="static/scripts/functions.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="static/favicon/site.webmanifest">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- navbar -->
+    <nav class="navbar has-background-grey-lighter is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item has-text-weight-bold is-italic is-size-4" href="index.html">
+                Community
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item">
+                    Groups
+                </a>
+
+                <a class="navbar-item">
+                    Friends
+                </a>
+
+                <a class="navbar-item">
+                    Events
+                </a>
+
+                <a class="navbar-item" href="garage.html">
+                    Garage
+                </a>
+            </div>
+
+            <div class="navbar-end">
+                <a href="index.html" class="p-2">
+                    <div class="columns is-vcentered is-1 is-variable">
+                        <div class="column is-narrow">
+                            <figure class="image is-32x32">
+                                <img src="static/smile.jpg" class="is-rounded">
+                            </figure>
+                        </div>
+                        <div class="column is-narrow">Malcolm</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Body section -->
+
+
+    <section class="section has-background-grey">
+        <div class="container">
+
+            <!-- Nameplate box-->
+            <div class="columns is-vcentered">
+                <div class="column is-narrow">
+                    <div class="box">
+                        <article class="media">
+                            <figure class="media-left">
+                                <a href="index.html">
+                                    <p class="image is-64x64">
+                                        <img src="static/smile.jpg">
+                                    </p>
+                                </a>
+                            </figure>
+                            <div class="media-content">
+                                <div class="content">
+                                    <h3>1991
+                                        Civic
+                                        DX
+                                        <em>"Gyarados"</em>
+                                    </h3>
+
+                                    <p class="is-italic"> Malcolm Keyes</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- spacer column -->
+                <div class="column"></div>
+
+                <!-- social media icons -->
+
+                <!-- Instagram button -->
+
+                <div class="column is-narrow">
+                    <a class="button" href="https://www.instagram.com/malcolms_civic/">
+                        <span class="icon is-large">
+                            <i class="fab fa-instagram is-size-4"></i>
+                        </span>
+                    </a>
+                </div>
+
+
+                <!-- Facebook button -->
+
+
+                <!-- YouTube button -->
+
+
+                <!-- Website button -->
+
+
+                <!-- VINWiki button -->
+
+                <div class="column is-narrow">
+                    <a class="button" href="https://web.vinwiki.com/#/vin/2HGED6341MH579921">
+                        VINWIKI
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Pictures -->
+            <div class="box">
+                <div class="columns">
+                    <div class="column">
+                        <figure class="image">
+                            <img src="static/civic1.jpg">
+                        </figure>
+                    </div>
+                    <div class="column">
+                        <figure class="image">
+                            <img src="static/civic2.jpg">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- Vehicle navigation tabs -->
+    <div class="tabs is-centered is-medium has-background-grey-lighter mb-0">
+        <ul>
+            <li><a href="vehicle_about.html">About</a></li>
+            <li class="is-active"><a>Feed</a></li>
+            <li><a href="vehicle_documents.html">Documents</a></li>
+        </ul>
+    </div>
+
+    <!-- content -->
+    <section class="section has-background-white-ter">
+        <div class="container">
+
+            <!-- feed -->
+            <h1 class="title"> Updates ( 1 )</h1>
+
+            <!-- new update form -->
+
+            <!-- toggle visibility button -->
+            <button class="button" onclick="toggleVisibility('new-update-box')">
+                <span> New Update </span>
+                <span class="icon">
+                    <i class="fa-solid fa-plus"></i>
+                </span>
+            </button> <br><br>
+
+            <!-- actual form -->
+            <div class="box" id="new-update-box" style="display: none;">
+                <form action="/create_vehicle_update" method="POST">
+                    <!-- title -->
+                    <div class="field">
+                        <label class="label">Title</label>
+                        <div class="control">
+                            <input class="input" type="text" placeholder="Include a title for your update"
+                                name="update-title">
+                        </div>
+                    </div>
+
+                    <!-- update content -->
+                    <div class="field">
+                        <label class="label">Content</label>
+                        <div class="control">
+                            <textarea class="textarea" placeholder="Write a new update"
+                                name="update-content"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Add a YouTube link -->
+                    <div class="field">
+                        <label class="label">Add a YouTube video</label>
+                        <div class="control">
+                            <input class="input" type="text"
+                                placeholder="Add a YouTube link to automatically embed in your update."
+                                name="update-yt-link">
+                        </div>
+                    </div>
+
+                    <!-- bottom buttons -->
+                    <nav class="level">
+                        <div class="level-left">
+                            <div class="level-item">
+                                <!-- upload a picture -->
+                                <div class="file is-boxed">
+                                    <label class="file-label">
+                                        <input class="file-input" type="file" name="update-picture-file">
+                                        <span class="file-cta">
+                                            <span class="file-icon">
+                                                <i class="fas fa-upload"></i>
+                                            </span>
+                                            <span class="file-label">
+                                                Upload a picture…
+                                            </span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="level-right">
+                            <div class="level-item">
+                                <!-- submit & cancel button -->
+                                <div class="field is-grouped">
+                                    <div class="control">
+                                        <button class="button is-link">Submit</button>
+                                    </div>
+                                    <div class="control">
+                                        <button class="button is-link is-light">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+
+                </form>
+            </div><!-- pre existing updates-->
+            <div class="box">
+                <article class="media">
+                    <figure class="media-left">
+                        <a href="index.html">
+                            <p class="image is-64x64">
+                                <img src="static/smile.jpg">
+                            </p>
+                        </a>
+                    </figure>
+
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>Malcolm Keyes</strong> <small> February 17, 2022 at 17:43 </small>
+                                <br><strong>Testing!</strong><br>Testing vehicle updates!<br>I was going to work on my
+                                car today but had too much work ;-;<br>
+                            </p>
+                        </div>
+                        <figure class="image">
+                            <img src="static/civic2.jpg">
+                        </figure>
+
+
+
+
+
+                        <br>
+                        <figure class="image is-16by9 is-fullwidth">
+                            <iframe class="has-ratio" src="https://www.youtube.com/embed/UOrw15qOLHI"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </figure><!-- tags --><br>
+                        <div class="tags"><span class="tag is-primary">
+                                outing
+                            </span></div>
+                    </div>
+
+                    <!-- delete button -->
+                    <div class="media-right">
+                        <button class="delete"></button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p><strong>Community</strong> by <a href="https://malcolmk181.github.io">Malcolm Keyes</a>.</p>
+            <button class="button"><a href="logout.html"> Log out </a></button>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
